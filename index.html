@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark-Light-Mode</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Toggle switch -->
+    <div id="Theme-Changer">
+        <span id="toggle-icon">
+            <span class="toggle-Text">Light Mode</span>
+            <i class="fas fa-sun"></i>
+        </span>
+        <label class="theme-switch">
+            <input type="checkbox" name="" id="toggleSwitch">
+            <div class="slider round"></div>
+        </label>
+    </div>
+    <!-- navbar -->
+    <nav id="nav">
+        <a href="#home" class="link">Home</a>
+        <a href="#about" class="link">About</a>
+        <a href="#Projects" class="link">Projects</a>
+        <a href="#Contact" class="link">Contact Us</a>
+    </nav>
+
+    <section id="home">
+        <div id="HomeDiv">
+             <h1>Custome Title Here</h1>
+             <h2>Welcome to website!</h2>
+        </div>
+    </section>
+
+    <section id="about">
+        <h1 id="AboutTitle">Undraw Illustrations</h1>
+        <div id="AboutDiv">
+            <div class="imageContainer" id="imageContainer">
+                <h2>Programmer</h2>
+                <img src="images/undraw_programmer_re_owql.svg" alt="">
+            </div>
+            <div class="imageContainer">
+                <h2>Proud Coder</h2>
+                <img src="images/undraw_proud_coder_re_exuy.svg" alt="">
+            </div>
+            <div class="imageContainer">
+                <h2>Web Development</h2>
+                <img src="images/undraw_web_development_0l6v.svg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section  id="Projects">
+        <h1>Some Random Stuff!</h1>
+        <div id="ProjectsDiv" class="text-box">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores repellendus tempora fugiat reiciendis, ullam cupiditate totam a nostrum dolorem voluptates consequatur quidem. Corporis distinctio quaerat nihil, omnis officiis quas architecto!</p>
+        </div>
+    </section>
+
+    <section  id="Contact">
+        <div class="social-icons">
+            <i class="fab fa-github"></i>
+            <i class="fab fa-codepen"></i>
+            <i class="fab fa-linkedin-in"></i>
+            <i class="fab fa-medium"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-youtube"></i>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

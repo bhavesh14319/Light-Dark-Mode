@@ -1,0 +1,271 @@
+:root{
+    --inLightMode-color:rgb(66, 66, 66);
+    --inDarkMode-color:  greenyellow
+}
+
+html{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    background-color: #fcffff;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h20L0 20z' fill='%23abd1be' fill-opacity='0.33' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+/* navigation */
+nav{
+    margin: 0;
+    position: fixed;
+    z-index: 10;
+    width: 100vw;
+    padding: 25px;
+    background-color: rgb(255 255 255 / 50%);
+}
+
+a{
+    margin-right: 20px ;
+    color: rgb(255, 92, 92);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+a:hover{
+    color: rgb(66, 66, 66);
+    text-decoration: underline;
+}
+
+/* a[onHoverInLightMode]:hover,
+a[onHoverInLightMode]:focus{
+    color: var(--inLightMode-color);
+    text-decoration: underline;
+} */
+/* 
+a[onHoverInDarkMode]:hover,
+a[onHoverInDarkMode]:focus{
+    color: var(--inDarkMode-color);
+    text-decoration: underline;
+} */
+
+
+
+/* h1 */
+h1{
+    margin-bottom:  0;
+    font-size: 40px;
+}
+
+/* h2 */
+h2{
+    font-size: 20px;
+    color: lightslategray;
+}
+/* all section elements */
+section{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Home Div contains Title */
+#HomeDiv{
+    text-align: center;
+}
+
+
+/* About Div */
+
+#AboutDiv{
+    display: flex;
+    margin-top: 10px;
+}
+
+
+/* img */
+img{
+    height: 300px;
+    width: 300px;
+}
+
+/* image Container */
+
+.imageContainer{
+    text-align: center;
+    width: auto;
+    border: 1px solid #1b9999;
+    padding: 10px 20px;
+    margin-right: 25px;
+    border-radius: 10px;
+    background: rgb(255, 255, 255) ;
+    box-shadow: 0 5px 20px 1px rgba(0, 0, 0, 0.5);
+}
+
+/* Projects  */
+
+.text-box{
+    width: 40%;
+    text-align: justify;
+    margin-top: 25px;
+    color: white;
+    padding: 20px;
+    background: rgb(0 0 0 /50%);
+    border-radius: 10px;
+}
+p{
+    margin: 0;
+    line-height: 25px;
+}
+
+
+/* Contact Icons */
+.fab{
+    font-size: 100px;
+    margin-right: 50px;
+    color: rgb(255, 92, 92);
+    cursor: pointer;
+}
+
+.fab:hover{
+    color: var(--inLightMode-color);
+}
+
+#Theme-Changer{
+    display: flex;
+    position: fixed;
+    z-index: 100;
+   align-items: center;
+   right: 25px;
+   top: 20px;
+}
+
+
+
+.theme-switch{
+    display: inline-block;
+    height: 34px;
+    width: 60px;
+    position: relative;
+}
+.theme-switch input{
+    display: none;
+}
+
+#Theme-Changer span{
+    margin-right: 10px;
+    /* font-size: 1rem; */
+}
+
+#Theme-Changer span i{
+    top: 2px;
+    position: relative;
+}
+
+.toggle-Text{
+    color: rgb(66, 66, 66);
+    position: relative;
+    font-size: 25px;
+    top: -3px;
+    
+}
+
+.slider{
+    background: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.4s;
+}
+
+.slider::before {
+    background: #fff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: 0.4s;
+    width: 26px;
+  }
+
+  input:checked + .slider {
+    background: rgb(255, 92, 92);
+  }
+
+  input:checked + .slider::before {
+    transform: translateX(26px);
+  }
+
+  .slider.round {
+    border-radius: 34px;
+  }
+
+  .slider.round::before {
+    border-radius: 50%;
+  }
+  
+  .fas {
+    font-size: 30px;
+    margin-right: 5px;
+  }
+
+/* media Query */ 
+    
+@media screen and (max-width:700px) {
+   nav{
+       padding: 15px;
+   }
+
+    a{
+        margin-right: 15px;
+    }
+
+    #AboutDiv{
+        flex-direction: column;
+    }
+
+    img{
+        width: 250px;
+        height: 250px;
+    }
+
+    #AboutTitle{
+        margin-top: 70px;
+        
+    }
+    .imageContainer{
+        margin-right:  0 ;
+        margin-bottom: 5px;
+    }
+
+    .text-box{
+        width: 60%;
+    }
+    p{
+        line-height: 20px;
+    }
+
+
+
+    .fab{
+        font-size: 40px;
+        margin:10px;
+        color: rgb(255, 92, 92);
+        cursor: pointer;
+    }
+
+    #toggle-icon{
+        display: none;
+    }
+
+    .theme-switch{
+        left: 15px;
+        top: -7px;
+    }
+
+}
